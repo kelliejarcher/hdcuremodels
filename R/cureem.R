@@ -262,7 +262,7 @@ cureem <- function(formula, data, subset, x_latency = NULL,
   if (is.null(penalty_factor_lat)) {
     penalty_factor_lat <- rep(1, ncol(x_lat))
   }
-  if (any(!c(penalty_factor_inc, penalty_factor_inc) %in% c(0, 1))) {
+  if (any(!c(penalty_factor_inc, penalty_factor_lat) %in% c(0, 1))) {
     stop("Error: Penalty factors specified in penalty_factor_inc and
          penalty_factor_inc can only include 0 or 1")
   }
@@ -319,7 +319,7 @@ cureem <- function(formula, data, subset, x_latency = NULL,
   logLik <- logLik_inc + logLik_lat
   output <- list(
     b_path = b_path, beta_path = beta_path,
-    b0_path = b0_path, logLik = logLik,
+    b0_path = b0_path, logLik_inc = logLik_inc, logLik_lat = logLik_lat,
     x_incidence = x_inc,
     x_latency = x_lat, y = y, model = model, scale = scale,
     method = "EM", call = cl
