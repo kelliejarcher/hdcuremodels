@@ -20,10 +20,10 @@ event.
 
 ## Installation
 
-You can install this version of hdcuremodels using:
+You can install the development version of hdcuremodels like so:
 
 ``` r
-install.packages("hdcuremodels")
+remotes::install_github("https://github.com/kelliejarcher/hdcuremodels")
 ```
 
 ## Example
@@ -72,7 +72,7 @@ nonzerocure_test(km_train)
 #> [1] 0.2853081
 #> 
 #> $p_value
-#> [1] 0.002
+#> [1] 0.004
 #> 
 #> $time_95_percent_of_events
 #> [1] 5.553847

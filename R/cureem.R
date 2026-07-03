@@ -163,7 +163,7 @@
 #' @srrstats {RE4.4} *The specification of the model, generally as a formula (via `formula()`)*
 #' @srrstats {RE4.7} *Where appropriate, convergence statistics*
 #' @srrstats {RE4.8} *Response variables, and associated "metadata" where applicable.*
-#' @seealso \code{\link{cv_cureem}}
+#' @seealso \code{\link[hdcuremodels]{cv_cureem}}
 #'
 #' @keywords models
 #' @keywords regression
@@ -264,7 +264,7 @@ cureem <- function(formula, data, subset, x_latency = NULL,
   }
   if (any(!c(penalty_factor_inc, penalty_factor_lat) %in% c(0, 1))) {
     stop("Error: Penalty factors specified in penalty_factor_inc and
-         penalty_factor_inc can only include 0 or 1")
+         penalty_factor_lat can only include 0 or 1")
   }
   if (any(c(lambda_inc, lambda_lat, gamma_inc, gamma_lat) <= 0)) {
     stop("Error: Penalty pamameters lambda and gamma should be positive")
@@ -319,7 +319,7 @@ cureem <- function(formula, data, subset, x_latency = NULL,
   logLik <- logLik_inc + logLik_lat
   output <- list(
     b_path = b_path, beta_path = beta_path,
-    b0_path = b0_path, logLik_inc = logLik_inc, logLik_lat = logLik_lat,
+    b0_path = b0_path, logLik = logLik,
     x_incidence = x_inc,
     x_latency = x_lat, y = y, model = model, scale = scale,
     method = "EM", call = cl

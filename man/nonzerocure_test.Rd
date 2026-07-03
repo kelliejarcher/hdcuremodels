@@ -30,7 +30,7 @@ exponential model is used for generating the censoring times (default).}
 proportion of susceptibles = 1 (cured fraction = 0) against the alternative
 that the proportion of susceptibles < 1 (non-zero cured fraction)}
 
-\item{time_95_percent_of_events}{estimated time at which 95\% of
+\item{time_95_percent_of_events}{estimated time at which 95% of
 events should have occurred}
 }
 \description{
@@ -52,7 +52,7 @@ Maller, R. A. and Zhou, X. (1996) \emph{Survival Analysis with
 Long-Term Survivors}. John Wiley & Sons.
 }
 \seealso{
-\code{\link[survival]{survfit}}, \code{\link{cure_estimate}},
-\code{\link{sufficient_fu_test}}
+\code{\link[survival]{survfit}}, \code{\link[hdcuremodels]{cure_estimate}},
+\code{\link[hdcuremodels]{sufficient_fu_test}}
 }
 \keyword{htest}
