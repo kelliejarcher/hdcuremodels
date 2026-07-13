@@ -8,6 +8,8 @@
 [![Status at rOpenSci Software Peer
 Review](https://badges.ropensci.org/692_status.svg)](https://github.com/ropensci/software-review/issues/692)
 [![R-CMD-check](https://github.com/ropensci/hdcuremodels/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/hdcuremodels/actions/workflows/R-CMD-check.yaml)
+[![Status at rOpenSci Software Peer
+Review](https://badges.ropensci.org/692_status.svg)](https://github.com/ropensci/software-review/issues/692)
 <!-- badges: end -->
 
 The goal of hdcuremodels is to allow one to fit a penalized mixture cure
@@ -20,10 +22,10 @@ event.
 
 ## Installation
 
-You can install the development version of hdcuremodels like so:
+You can install this version of hdcuremodels using:
 
 ``` r
-remotes::install_github("https://github.com/kelliejarcher/hdcuremodels")
+install.packages("hdcuremodels")
 ```
 
 ## Example
@@ -53,7 +55,7 @@ cure fraction seems to be present.
 km_train <- survfit(Surv(cryr, relapse.death) ~ 1, data = amltrain)
 ```
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-2-1.png" alt="" width="100%" />
 
 As can be seen from the Kaplan-Meier plot, there is a long-plateau that
 does not drop down to zero. This may indicate the presence of a cured
@@ -72,7 +74,7 @@ nonzerocure_test(km_train)
 #> [1] 0.2853081
 #> 
 #> $p_value
-#> [1] 0.004
+#> [1] "< 0.001"
 #> 
 #> $time_95_percent_of_events
 #> [1] 5.553847
@@ -136,7 +138,7 @@ Kaplan-Meier curves.
 km_cured <- survfit(Surv(cryr, relapse.death) ~ p_group, data = amltrain)
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-5-1.png" alt="" width="100%" />
 
 We can assess how well our MCM identified higher versus lower risk
 patients among those predicted to be susceptible visually by examining
@@ -146,7 +148,7 @@ the Kaplan-Meier curves.
 km_suscept <- survfit(Surv(cryr, relapse.death) ~ train_predict$latency_risk, data = amltrain, subset = (p_group == "Susceptible"))
 ```
 
-<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-6-1.png" alt="" width="100%" />
 
 Of course, we expect our model to perform well on our training data. We
 can also assess how well our fitted MCM performs using the independent
