@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![Status at rOpenSci Software Peer Review](https://badges.ropensci.org/692_status.svg)](https://github.com/ropensci/software-review/issues/692)
 [![R-CMD-check](https://github.com/ropensci/hdcuremodels/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/hdcuremodels/actions/workflows/R-CMD-check.yaml)
+[![Status at rOpenSci Software Peer Review](https://badges.ropensci.org/692_status.svg)](https://github.com/ropensci/software-review/issues/692)
 <!-- badges: end -->
 
 The goal of hdcuremodels is to allow one to fit a penalized mixture cure model (MCM) when there is a high-dimensional covariate space, such as when high-throughput genomic data are used in modeling time-to-event data, when some subjects will not experience the event of interest. Conventionally, we call the subset of subjects who are immune to the event of interest cured while all other subjects are susceptible to the event.
