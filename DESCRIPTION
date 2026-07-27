@@ -35,7 +35,7 @@ Suggests:
     testthat (>= 3.0.0)
 VignetteBuilder: knitr
 LazyData: true
-URL: https://github.com/ropensci/hdcuremodels
-BugReports: https://github.com/ropensci/hdcuremodels/issues
+URL: https://github.com/kelliejarcher/hdcuremodels
+BugReports: https://github.com/kelliejarcher/hdcuremodels/issues
 Config/testthat/edition: 3
 Config/roxygen2/version: 8.0.0
